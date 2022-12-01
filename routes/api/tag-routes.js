@@ -29,6 +29,9 @@ router.get('/:id', (req, res) => {
       res.status(404).json({message: "Error, no tag with this ID could be found"});
       return;
     }
+
+    res.json(data);
+
   }).catch(err =>{//default err msg
     res.status(500).json(err);
     console.log(err);
